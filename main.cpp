@@ -2,7 +2,7 @@
 #include <thread>
 #include <mutex>
 #include <vector>
-#include <algorithm>
+
 
 
 using namespace std;
@@ -24,7 +24,7 @@ void info(string name, double val)
         {
             distance = 100;
         }
-        cout << name << ": " << distance << endl;
+        cout << name << " swim " << distance << " m" << endl;
         mtx.unlock();
     }
 
@@ -70,6 +70,7 @@ int main()
     {
         cout << result[i].first << " took " << i + 1 << " place with a time of " << result[i].second << " seconds" << endl;
     }
+
 
   
  return 0;
